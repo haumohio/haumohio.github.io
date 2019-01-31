@@ -1,0 +1,39 @@
+---
+---
+
+
+header{
+  padding: 0 3rem;
+  background-size: cover;
+}
+h1{
+  text-align: center;
+  line-height: 2em;
+  font-size: 700%;
+}
+h2{
+  text-align: center;
+  line-height: 1.3em;
+  font-size: 300%;
+  padding-bottom: 2em;
+}
+@media screen and (max-width: 600px) {
+  h1 {font-size: 12vw;}
+  h2{ font-size: 8vw;}
+}
+
+.shadowed{
+  text-shadow: 3px 3px 6px white;
+}
+.inverse-shadowed{
+  color: white;
+  text-shadow: 3px 3px 6px black;
+}
+
+.markdown-body {
+}
+
+.christchurch{
+  background-image: url('../images/christchurch2.png');
+}
+

@@ -1,6 +1,9 @@
 ---
 title: Haumohio
-description: The wind of information
+description: Software development and consulting 
+layout: default
+class: christchurch
 ---
 
-# Hello
+
+Say something here
