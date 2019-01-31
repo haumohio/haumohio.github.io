@@ -31,9 +31,45 @@ h2{
 }
 
 .markdown-body {
+  font-size: 150%;
+  padding: 0 1em;
+
+  h3{
+    text-shadow: 2px 2px 10px gray;
+    clear: both;
+
+  }
+
+  p{
+    margin-top: 1em;
+    padding: 0 1em;
+    clear: both;
+  }
+  img{
+    width: 50%;
+    float:left;
+    margin-left: -1em;
+    margin-right: 1em;
+  }
+  img.right{
+    float:right;
+    margin-left: 1em;
+    margin-right: -1em;
+  }
+  br{
+    line-height: 2em;
+  }
 }
 
 .christchurch{
   background-image: url('../images/christchurch2.png');
 }
+footer{
+  clear: both;
+  background: rgba(0,0,0,0.1);
+  padding: 1em 1em;
+}
 
+footer div{
+  display: inline-block;
+}
