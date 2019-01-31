@@ -4,38 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{site.title}}  {{page.description}}</title>
+    <title>{{page.title}} - {{site.title}}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" />    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous">    <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
   </head>
-  <body>
+  <body class="{{page.class}}">
     <div>
-      <header class="{{page.class}}">
+      <header style="background-image: url('/assets/post_images/{{page.image}}');">
         <h1 class="shadowed">{{page.title}}</h1>
         <h2 class="inverse-shadowed">{{page.description}}</h2>
       </header>
-      <section class="markdown-body ">
+      <section class="markdown-body post">
 
       {{ content }}
 
       </section>
-      <footer class="">
-          <div class="col-sm-2 col-sm-offset-2 text-center" >
-            <a href="https://twitter.com/PeterChch" rel="noopener noreferrer" >
-              <i class="fa fa-twitter fa-3x wow bounceIn"></i><br/>
-              <span>@PeterChch</span>
-            </a>
-          </div>
-          <div class="col-sm-2 text-center" >
-            <a href="mailto:info@haumohio.com" >
-              <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i><br/>
-              <span>info@haumohio.com</span>
-            </a>
-        </div>
-
+      <footer >
+        <label>Tags:</label>
+        {% for tag in page.tags %}
+          <span href="{{ post.url }}">{{ tag }}</span>
+        {% endfor %}
       </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha256-63ld7aiYP6UxBifJWEzz87ldJyVnETUABZAYs5Qcsmc=" crossorigin="anonymous"></script>

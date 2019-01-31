@@ -1,6 +1,28 @@
 ---
 ---
 
+@font-face {
+  font-family: 'Haumohio';
+  src:  url('../fonts/NovaRound.ttf');
+  src:  url('../fonts/NovaRound.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Programming';
+  src:  url('../fonts/Consolas.ttf');
+  src:  url('../fonts/Consolas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProgHead';
+  src:  url('../fonts/bitwise.ttf');
+  src:  url('../fonts/bitwise.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 header{
   padding: 0 3rem;
@@ -31,8 +53,9 @@ h2{
 }
 
 .markdown-body {
-  font-size: 150%;
+  font-size: 130%;
   padding: 0 1em;
+  font-family: Programming;
 
   h3{
     text-shadow: 2px 2px 10px gray;
@@ -44,12 +67,15 @@ h2{
     margin-top: 1em;
     padding: 0 1em;
     clear: both;
+    text-align: justify;
   }
   img{
     width: 50%;
     float:left;
     margin-left: -1em;
     margin-right: 1em;
+    padding: 2em 0;
+    vertical-align: middle;
   }
   img.right{
     float:right;
@@ -58,6 +84,20 @@ h2{
   }
   br{
     line-height: 2em;
+  }
+}
+
+.post{
+  blockquote {
+    border-left: lightblue 4px solid;
+    margin-left: 1em;
+    font-style: italic;
+    font-size: 120%;
+    opacity: 0.8;
+  }
+  img{
+    width:100%;
+    margin: 0 -1em;
   }
 }
 
