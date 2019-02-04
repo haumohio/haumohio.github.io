@@ -24,9 +24,14 @@
   font-style: normal;
 }
 
+body {
+  // background-image: url('../images/bg.png');
+}
 header{
+  font-family: Haumohio;
   padding: 0 3rem;
   background-size: cover;
+  background-position: center center;
 }
 h1{
   text-align: center;
@@ -39,10 +44,7 @@ h2{
   font-size: 300%;
   padding-bottom: 2em;
 }
-@media screen and (max-width: 600px) {
-  h1 {font-size: 12vw;}
-  h2{ font-size: 8vw;}
-}
+
 
 .shadowed{
   text-shadow: 3px 3px 6px white;
@@ -64,41 +66,72 @@ h2{
   }
 
   p{
-    margin-top: 1em;
     padding: 0 1em;
     clear: both;
     text-align: justify;
   }
+
+  br{
+    line-height: 2em;
+  }
+  hr{
+    line-height: 2em;
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  blockquote{
+    width: calc( 100% - 3em );
+  }
+  .byline {
+    font-size: 75%;
+    font-style: italic;
+  }
+  h3 a {
+    color: inherit;
+  }
+}
+.half-n-half{
   img{
-    width: 50%;
+    width: 100%;
+  }
+  .image{
+    width: 55%;
     float:left;
     margin-left: -1em;
     margin-right: 1em;
-    padding: 2em 0;
-    vertical-align: middle;
+    margin-top: 1em;
   }
-  img.right{
+  .image.right{
     float:right;
     margin-left: 1em;
     margin-right: -1em;
   }
-  br{
-    line-height: 2em;
+  p, h3{
+    display: inline-block;
+    width:45%;
+  }
+  .fullwidth{
+    width: 100%;
+  }
+  .excerpt{
+    font-size: 80%;
   }
 }
 
+blockquote {
+  border-left: lightblue 4px solid;
+  margin-left: 1em;
+  font-style: italic;
+  font-size: 120%;
+  opacity: 0.8;
+}
 .post{
-  blockquote {
-    border-left: lightblue 4px solid;
-    margin-left: 1em;
-    font-style: italic;
-    font-size: 120%;
-    opacity: 0.8;
-  }
   img{
     width:100%;
     margin: 0 -1em;
   }
+
 }
 
 .christchurch{
@@ -112,4 +145,25 @@ footer{
 
 footer div{
   display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {font-size: 12vw;}
+  h2{ font-size: 8vw;}
+  .markdown-body{
+    .image, image.right {
+      float: none;
+      width: 100vw;
+      margin: 0;
+      margin-left: -2em;
+      margin-bottom: 1em;
+    }
+    p, h3, blockquote{
+      display: inherit;
+      width: unset;
+      padding: 0;
+      margin-top: 1em;
+    }
+
+  }
 }

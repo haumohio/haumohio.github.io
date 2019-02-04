@@ -4,16 +4,19 @@ description: You can't fix it, if you don't measure it
 layout: post
 tags: [agile, metrics, quality]
 image: measurement.jpg
+excerpt_separator: <!--more-->
 ---
+One constant in my career has been the need to measure. While working in a sawmilling technology research team at Scion in the late 90s my catch-cry to a very traditional industry became 
+
+> You can't fix it, if you don't measure it
+
+The sentiment is the same in our software industry too. If a change is made to software without the means to measure the effect then all that can be done is to hope that everything is as intended.
+<!--more-->
 
 _Today's thought was inspired by a tweet by [@jeremywaite] via [@csterwa] reminding me of a Dilbert cartoon on the use of metrics by 'management'._
 
 [![CENTERED](/assets/post_images/lies_dil1.png)][dil1]
 
-One constant in my career has been the need to measure. While working in a sawmilling technology research team at Scion in the late 90s
- my catch-cry to a very traditional industry became "You can't fix it, if you don't measure it". The sentiment is the same in our 
-software industry too. If a change is made to software without the means to measure the effect then all that can be done is to hope 
-that everything is as intended.
 
 If you're living in the land of the hopeful and don't know where to start then I suggest looking at something simple, direct, 
 and most importantly easy to automate. There's no point in starting out on this endeavour by creating something that is 

@@ -4,9 +4,11 @@ title: Intro to Clarus
 description: Starting as Dev Practices Lead
 tags: [about]
 image: clarus.jpg
+excerpt_separator: <!--more-->
 ---
 
 Hello, and welcome to my first blog entry as software development consultant at [Clarus](http://clarus.co.nz){:target="_blank"}. But, before I start, let me introduce myself.
+<!--more-->
 
 ![NOBORDER](/assets/post_images/intro_hello sticker.png)
  
