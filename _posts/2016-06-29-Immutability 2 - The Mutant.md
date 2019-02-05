@@ -17,30 +17,38 @@ However, when it came to users maintaining the data structures the infrastructur
 
 Thankfully, as F# is still part of the .Net family, it can be made to play by these rules too. The language supports __properties with setters__ as well as getters, and highlights the fact that we are mutating an object with a specific syntax; the “<-” symbol.
 
-    myObject.value <- 42
+```fsharp
+myObject.value <- 42
+```
 
 This symbol is especially reserved for changing the value of an existing value, and the value has to be specifically declared as mutable. To create a simple mutable value, you can just add the mutable keyword in the declaration (along with an initial value).
 
-    let mutable x = 0
+```fsharp
+let mutable x = 0
+```
 
 ### Mutable Classes with Properties
 After a bit of research we found the F# for fun and profit page on classes. Now we can create a mutable, complex class with automatic properties, like so:
 
-    type MyClass() =
-        member val MyProp = 42 with get,set
+```fsharp
+type MyClass() =
+    member val MyProp = 42 with get,set
+```
 
 Also, in the more complex case where you want to use an explicit mutable backing field…
 
-    type MyComplexClass( int initialValue ) =
-        let mutable _myProp = initialValue
-        member val MyProp =
-            with get() = _myProp
-                set( newValue ) = _myProp <- newValue
-
-* Note the use of the <- symbol in the setter.
+```fsharp
+type MyComplexClass( int initialValue ) =
+    let mutable _myProp = initialValue
+    member val MyProp =
+        with get() = _myProp
+            set( newValue ) = _myProp <- newValue
+```
+\* Note the use of the <- symbol in the setter.
 
 This allowed us to create a mutable class that could be updated by the existing UI layer and passed to the existing persistence layer for saving to the db.
 
+```fsharp
     type Person() =
         member val Name = "" with get,set
         member val Address = "" with get,set
@@ -57,6 +65,7 @@ This allowed us to create a mutable class that could be updated by the existing 
     match sanitize(p1) with //check for nasties and proceed accordingly
     | Sanitary -> db.Save(p1)
     | Unsanitary err -> ui.DisplayError(err)
+```
 
 As you can see, the code is starting to look a little un-functional and really more like C# code with an F# syntax. This seemed to be an almost inevitable __by-product of interfacing with an OO language__ so closely, at least along the interfaces. However, It did allow us to move incrementally into a better (not biased at all !) language, and as the code moved away from the interface it became more functional and took better advantage of the language.
 

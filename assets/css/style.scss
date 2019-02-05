@@ -97,11 +97,14 @@ nav{
   h3 a {
     color: inherit;
   }
-  pre.highlight {
+  div.highlight {
     padding: 2em;
-    margin-left: 2em;
-    background: #666;
-    color: white;
+    margin: 1em 2em;
+    // background: #666;
+    // color: white;
+  }
+  pre.highlight{
+    font-family: Programming;
   }
 }
 .half-n-half{
