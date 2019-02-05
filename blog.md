@@ -7,7 +7,7 @@ class: christchurch
 
 {% for post in site.posts %}
 
-### [{{ post.title }}]({{post.url}})
+### [{{ post.title }} - {{ post.description }}]({{post.url}})
 
 {:class="byline"}
 ({{post.date | date_to_string}} - {{post.tags | array_to_sentence_string}})

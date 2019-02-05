@@ -14,7 +14,19 @@
   <body class="{{page.class}}">
     <div>
       <header style="background-image: url('/assets/post_images/{{page.image}}');">
-        <h1 class="shadowed">{{page.title}}</h1>
+        <nav id="navbar" class="navbar navbar-light navbar-expand-md ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+            </ul>
+          </div>
+        </nav>        
+        <h1 class="shadowed">{{page.title | ""}}</h1>
         <h2 class="inverse-shadowed">{{page.description}}</h2>
       </header>
       <section class="markdown-body post">
@@ -25,7 +37,7 @@
       <footer >
         <label>Tags:</label>
         {% for tag in page.tags %}
-          <span href="{{ post.url }}">{{ tag }}</span>
+          <span href="{{ post.url }}">{{ tag }},</span>
         {% endfor %}
       </footer>
     </div>

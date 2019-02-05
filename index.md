@@ -9,16 +9,15 @@ layoutclass: half-n-half
 ---
 
 {:class="image right"}
-![Peter](./assets/images/profile pic.png)
+![Programming](./assets/images/dev.png)  
 
-Our Principal Consulting Software Developer, Peter Bayne, has been involved in software development teams since the mid-90s using technologies such as AWS, Python, and .Net, and most recently F#. Working in industries as broad-ranging as forestry science, factory automation, commerce, and hospital logistics.  
-His experience includes Technical Consultant at [Double-O](http://doubleo.nz){:target="_blank"}, leading the Software Development Practices group at [Assurity](http://assurity.co.nz){:target="_blank"}, Product lead at [Atlas Tech](http://atlastech.co.nz/){:target="_blank"}, and Senior Scientist at [Scion Research](https://scionresearch.com/){:target="_blank"}.  
+something about development
 
 ---
 
 {:class="image"}
 ![Double0](./assets/images/double0.png)  
-  
+
 Technical consulting and leadership in association with [Double-O Consulting](http://doubleo.nz){:target="_blank"}.  
 
 Specialising in emergent architecture and technical practices such as test driven development.
@@ -27,9 +26,27 @@ Particular focus on the Callaghan [Build For Speed](https://www.callaghaninnovat
 ---
 
 {:class="image right"}
+![Code Club](./assets/images/codeclub.png)  
+
+something about code club
+
+---
+
+{:class="image"}
+![Pete the Programmer](./assets/images/windmill2.png)  
+
+something about pete the programmer
+
+
+---
+
+{:class="image right"}
 ![Blogging](./assets/images/blog.jpg)
 
-### [{{ site.posts.first.title }}]({{site.posts.first.url}})
+### [{{ site.posts.first.title }} - {{ site.posts.first.description }}]({{site.posts.first.url}}) 
+
+{:class="excerpt"}
+({{site.posts.first.date | date_to_string}} - {{site.posts.first.tags | array_to_sentence_string}})
 
 {:class="excerpt"}
 {{ site.posts.first.excerpt }}

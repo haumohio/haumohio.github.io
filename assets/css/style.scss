@@ -32,18 +32,21 @@ header{
   padding: 0 3rem;
   background-size: cover;
   background-position: center center;
+  min-height: 36em;
+  h1{
+    text-align: center;
+    line-height: 2em;
+    font-size: 700%;
+    margin-top: -0.5em;
+  }
+  h2{
+    text-align: center;
+    line-height: 1.3em;
+    font-size: 300%;
+    padding-bottom: 2em;
+  }
 }
-h1{
-  text-align: center;
-  line-height: 2em;
-  font-size: 700%;
-}
-h2{
-  text-align: center;
-  line-height: 1.3em;
-  font-size: 300%;
-  padding-bottom: 2em;
-}
+
 
 
 .shadowed{
@@ -53,12 +56,22 @@ h2{
   color: white;
   text-shadow: 3px 3px 6px black;
 }
+nav{
+  a{
+    color: currentColor;
+  }
+}
 
 .markdown-body {
   font-size: 130%;
   padding: 0 1em;
   font-family: Programming;
-
+  h2{
+    text-shadow: 2px 2px 10px gray;
+    font-family: ProgHead;
+    font-size: 200%;
+    text-indent: 2em;
+  }
   h3{
     text-shadow: 2px 2px 10px gray;
     clear: both;
@@ -74,12 +87,6 @@ h2{
   br{
     line-height: 2em;
   }
-  hr{
-    line-height: 2em;
-    color: transparent;
-    background-color: transparent;
-    border-color: transparent;
-  }
   blockquote{
     width: calc( 100% - 3em );
   }
@@ -89,6 +96,12 @@ h2{
   }
   h3 a {
     color: inherit;
+  }
+  pre.highlight {
+    padding: 2em;
+    margin-left: 2em;
+    background: #666;
+    color: white;
   }
 }
 .half-n-half{
@@ -100,7 +113,6 @@ h2{
     float:left;
     margin-left: -1em;
     margin-right: 1em;
-    margin-top: 1em;
   }
   .image.right{
     float:right;
@@ -116,6 +128,13 @@ h2{
   }
   .excerpt{
     font-size: 80%;
+  }
+  hr{
+    line-height: 2em;
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+    clear: both;
   }
 }
 
@@ -148,8 +167,8 @@ footer div{
 }
 
 @media screen and (max-width: 600px) {
-  h1 {font-size: 12vw;}
-  h2{ font-size: 8vw;}
+  header h1 {font-size: 12vw;}
+  header h2{ font-size: 8vw;}
   .markdown-body{
     .image, image.right {
       float: none;
