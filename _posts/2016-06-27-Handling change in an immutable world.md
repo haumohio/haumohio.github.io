@@ -2,7 +2,7 @@
 title: ""
 description: Handling change in an immutable world
 layout: post
-tags: [tdd, coding]
+tags: [F#, coding, immutability]
 image: Constant change.png
 excerpt_separator: <!--more-->
 ---

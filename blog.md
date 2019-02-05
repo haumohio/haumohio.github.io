@@ -6,8 +6,9 @@ class: christchurch
 ---
 
 {% for post in site.posts %}
-
-### [{{ post.title }} - {{ post.description }}]({{post.url}})
+{% assign titles = post.title | split: '|'%}
+{% assign titles = titles | push: post.description %}
+### [{{ titles  | array_to_sentence_string: "-" }}]({{post.url}})
 
 {:class="byline"}
 ({{post.date | date_to_string}} - {{post.tags | array_to_sentence_string}})

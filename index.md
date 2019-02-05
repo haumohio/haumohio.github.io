@@ -42,8 +42,9 @@ something about pete the programmer
 
 {:class="image right"}
 ![Blogging](./assets/images/blog.jpg)
-
-### [{{ site.posts.first.title }} - {{ site.posts.first.description }}]({{site.posts.first.url}}) 
+{% assign titles = site.posts.first.title | split: '|'%}
+{% assign titles = titles | push: site.posts.first.description %}
+### [{{ titles  | array_to_sentence_string: "-" }}]({{site.posts.first.url}})
 
 {:class="excerpt"}
 ({{site.posts.first.date | date_to_string}} - {{site.posts.first.tags | array_to_sentence_string}})

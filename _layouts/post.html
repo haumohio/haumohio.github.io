@@ -26,7 +26,7 @@
             </ul>
           </div>
         </nav>        
-        <h1 class="shadowed">{{page.title | ""}}</h1>
+        <h1 class="shadowed">{{page.title | default: ""}}</h1>
         <h2 class="inverse-shadowed">{{page.description}}</h2>
       </header>
       <section class="markdown-body post">
