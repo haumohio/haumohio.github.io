@@ -24,10 +24,12 @@ This is a question that I struggled with when coming to grips with this way of p
 
 The standard answer to the above question is __you don’t__. Instead you make a new object that is like the old object but different.
 
+```fsharp
     person {                 olderPerson {                 
         name = “Fred”    -->      name = "Fred"
         age = 42                  age = 43
     }                        }
+```
 
 This is where F# can help us with the first technique for handling change…
 
@@ -40,15 +42,21 @@ F# has a concept of a record, which is similar to a struct in C# in that:
 - It can be compared to other records of the same type for equality by comparing its members’ values (i.e. compare the name and the age values)
 - Records have a simple definition…
 
+```fsharp
     type Person = { name: string; age: int; rating: double }
+```
 
 … and a simple instantiation.
 
+```fsharp
     let p1 = { name = "Pete"; age = 42; rating = 0.0 }
+```
 
 This is all good, but what about handling change? The record also has an __alternate constructor__ that goes like this:
 
+```fsharp
     let p2 = { p1 with age = 43; rating = p1.rating * 1.2 }
+```
 
 This quickly lets you create a complex object that is a copy of the original with a few tweaks. You can even reference the original object within the constructor, as I did with the _rating value_. This is particularly useful for appending to contained lists.
 

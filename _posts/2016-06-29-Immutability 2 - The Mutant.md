@@ -11,7 +11,9 @@ This is part 2 of a series of handling change within immutability. Today we are 
 
 >Why would you intentionally create a mutable object in a language founded on mutability?
 
-Well, let me tell you a story… I was working with a team that used the .Net stack, and C# by default, with a fairly complex inter-related class structure. When .Net 3.5 came around some of us were excited by the lambda functions and linq sub-language, and without knowing it the architecture started looking pretty functional. Once we recognised this, it was an obvious next step to look at F# for some of the logic work. So we ended up with a hybrid application that was __partially OO and partially functional__, which actually worked pretty well for us.
+Well, let me tell you a story… 
+<!--more-->
+I was working with a team that used the .Net stack, and C# by default, with a fairly complex inter-related class structure. When .Net 3.5 came around some of us were excited by the lambda functions and linq sub-language, and without knowing it the architecture started looking pretty functional. Once we recognised this, it was an obvious next step to look at F# for some of the logic work. So we ended up with a hybrid application that was __partially OO and partially functional__, which actually worked pretty well for us.
 
 However, when it came to users maintaining the data structures the infrastructure was designed to work with __mutable, persisted classes__. Inevitably, the F# data structures needed to follow suit.
 
