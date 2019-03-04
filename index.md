@@ -55,4 +55,4 @@ something about pete the programmer
 {:class="excerpt"}
 [read more >]({{site.posts.first.url}})
 
-To read {{ site.posts.size }} more posts [Click here >](/blog)
+To read {{ site.posts.size }} more posts [Click here >](blog.md)

@@ -1,3 +1,19 @@
 title: Haumohio
 description: The wind of information
-exclude: README.md
+exclude: [README.md]
+
+# applies pretty for all
+permalink: pretty
+
+defaults:
+    - scope:
+        path: ""
+        type: posts
+      values:
+        permalink: /blog/:title
+
+plugins:
+  - jekyll-relative-links
+
+collections:
+  - contents

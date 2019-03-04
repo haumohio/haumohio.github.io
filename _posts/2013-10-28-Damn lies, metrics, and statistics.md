@@ -4,6 +4,7 @@ description: You can't fix it, if you don't measure it
 layout: post
 tags: [agile, metrics, quality]
 image: measurement.jpg
+navbar-class: inverse
 excerpt_separator: <!--more-->
 ---
 One constant in my career has been the need to measure. While working in a sawmilling technology research team at Scion in the late 90s my catch-cry to a very traditional industry became 

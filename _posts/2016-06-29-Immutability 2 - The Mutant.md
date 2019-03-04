@@ -4,6 +4,7 @@ description: The Mutant
 layout: post
 tags: [F#, coding, immutability]
 image: mutable.png
+navbar-class: inverse
 excerpt_separator: <!--more-->
 ---
 

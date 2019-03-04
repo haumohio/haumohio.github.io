@@ -4,6 +4,7 @@ title: Intro to Clarus
 description: Starting as Dev Practices Lead
 tags: [about]
 image: clarus.jpg
+navbar-class: inverse
 excerpt_separator: <!--more-->
 ---
 
@@ -26,7 +27,7 @@ So along those lines, I have a few ideas about some topics to discuss.  What do 
 
 [![compiling](/assets/post_images/intro_testing.png)][xkcd]
 
-Of course, as well as all this I'd like to bring you along on my adventures as I build on the developer-focused capabilities here at Clarus, as well as the experiences and discussions I have amongst our developer community in Christchurch.  In this vein, I'd like to make a shout-out to all my new friends at AdScale and Tim Ottinger of Industrial Logic for a great refresher course on all things refactoring-y. If you, the reader, are interested in having a chat, or even getting some developer focused training/coaching, just let me know using the details at the end < /shameless plug>. 
+Of course, as well as all this I'd like to bring you along on my adventures as I build on the developer-focused capabilities here at Clarus, as well as the experiences and discussions I have amongst our developer community in Christchurch.  In this vein, I'd like to make a shout-out to all my new friends at AdScale and Tim Ottinger of Industrial Logic for a great refresher course on all things refactoring-y. If you, the reader, are interested in having a chat, or even getting some developer focused training/coaching, just let me know using the details at the end ``</shameless plug>``. 
 
 In a world of various management styles and fads from the leanest of scrum-bans to the most structured of waterfalls, let's have a chat about what us developers can do for ourselves to make our professional lives richer. 
 

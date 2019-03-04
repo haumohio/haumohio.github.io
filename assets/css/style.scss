@@ -27,27 +27,33 @@
 body {
   // background-image: url('../images/bg.png');
 }
-header{
-  font-family: Haumohio;
-  padding: 0 3rem;
+.head-container{
   background-size: cover;
   background-position: center center;
-  min-height: 36em;
+
+}
+header{
+  font-family: Haumohio;
+  padding: 2rem 3rem 0 3rem;
+  min-height: 42em;
   h1{
-    text-align: center;
+    text-align: left;
     line-height: 2em;
     font-size: 700%;
     margin-top: -0.5em;
   }
   h2{
-    text-align: center;
+    text-align: left;
     line-height: 1.3em;
     font-size: 300%;
     padding-bottom: 2em;
   }
 }
-
-
+@media (max-width: 768px){
+  nav {
+    background: rgba(255,255,255,0.3);
+  }
+}
 
 .shadowed{
   text-shadow: 3px 3px 6px white;
@@ -56,15 +62,24 @@ header{
   color: white;
   text-shadow: 3px 3px 6px black;
 }
-nav{
-  a{
-    color: currentColor;
+nav.navbar-dark, nav.navbar-inverse{
+  .navbar-nav{
+    a, a.nav-link{
+      color: rgba(255,255,255,1);
+    }
+  }
+}
+nav.navbar-inverse, nav.navbar-light{
+  .navbar-nav{
+    a, a.nav-link{
+      color: rgba(0,0,0,0.8);
+    }
   }
 }
 
 .markdown-body {
   font-size: 130%;
-  padding: 0 1em;
+  padding: 1em;
   font-family: Programming;
   h2{
     text-shadow: 2px 2px 10px gray;
@@ -107,6 +122,17 @@ nav{
     font-family: Programming;
   }
 }
+
+.markdown-body.sectioned{
+  padding: 0;
+
+  section{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+
 .half-n-half{
   img{
     width: 100%;
@@ -116,12 +142,16 @@ nav{
     float:left;
     margin-left: -1em;
     margin-right: 1em;
-  }
+    margin-bottom: 0;
+    margin-block-end: 0;
+}
   .image.right{
     float:right;
     margin-left: 1em;
     margin-right: -1em;
-  }
+    margin-bottom: 0;
+    margin-block-end: 0;
+}
   p, h3{
     display: inline-block;
     width:45%;
@@ -156,6 +186,10 @@ blockquote {
 
 }
 
+.bg-orange{
+  background: rgba(244, 137, 66, 0.5);
+}
+
 .christchurch{
   background-image: url('../images/christchurch2.png');
 }
@@ -163,6 +197,7 @@ footer{
   clear: both;
   background: rgba(0,0,0,0.1);
   padding: 1em 1em;
+  margin-top: 3rem;
 }
 
 footer div{
@@ -173,12 +208,13 @@ footer div{
   header h1 {font-size: 12vw;}
   header h2{ font-size: 8vw;}
   .markdown-body{
-    .image, image.right {
+    .image, image.right, p.image {
       float: none;
       width: 100vw;
       margin: 0;
       margin-left: -2em;
-      margin-bottom: 1em;
+      margin-bottom: 0;
+      margin-block-end: 0;
     }
     p, h3, blockquote{
       display: inherit;
