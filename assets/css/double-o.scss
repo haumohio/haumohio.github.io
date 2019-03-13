@@ -1,36 +1,42 @@
 ---
 ---
 
+$color-bg: #002635;
 $color-main: #ff4427;
 $color-highlight: white;
 $color-accent: #ff7c68;
 $spot-size: 130px;
 
-html{height: 100%;}
+html{}
 body{
-    background-color: #002635;
+    background-color: $color-bg;
     color: $color-main;
     box-sizing: border-box;
 }
+
+$bg-base: url('../images/doubleo_dark.png') left top / auto auto ;
+$bg-footer: url('../images/doubleo_footer.png') left bottom / auto auto ;
+$bg-ap-deliver: url('../images/Agile Principles-Deliver.png') right top / auto 140px ;
+$bg-ap-awesome: url('../images/Agile Principles-Awesome.png') right top / auto 140px ;
+
 body.full-double0{
-    background-image: url('../images/doubleo_dark.png'), url('../images/doubleo_footer.png');
-    background-position: top left, 20px bottom;
+    background: $bg-base, $bg-footer;
     background-repeat: no-repeat;
-    background-size: auto auto, 100% auto;
+    background-color: $color-bg;
     padding-top: 120px;
-    padding-bottom: 160px;
-    height: 100%;
-    min-height: 100%;
+    margin-bottom: 200px;
 }
 
-body.full-double0.principle-Deliver{
-    background-image: url('../images/doubleo_dark.png'), url('../images/doubleo_footer.png'), url('../images/Agile Principles-Deliver.png');
-    background-position: top left,  20px bottom, top right;
-    background-size: auto auto, 100% auto, auto 140px;
-    background-origin: padding-box;
-
+body.principle-Deliver{
+    background: $bg-base, $bg-footer, $bg-ap-deliver;
+    background-color: $color-bg;
+    background-repeat: no-repeat;
 }
-
+body.principle-Awesome{
+    background: $bg-base, $bg-footer, $bg-ap-awesome;
+    background-color: $color-bg;
+    background-repeat: no-repeat;
+}
 
 .markdown-body {
     font-family: Georgia,Cambria,"Times New Roman",Times,serif;
