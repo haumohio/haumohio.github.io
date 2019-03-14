@@ -5,7 +5,7 @@ $color-bg: #002635;
 $color-main: #ff4427;
 $color-highlight: white;
 $color-accent: #ff7c68;
-$spot-size: 130px;
+$spot-size: 100px;
 
 html{}
 body{
@@ -45,7 +45,7 @@ body.principle-Awesome{
     -webkit-font-smoothing: antialiased;
     color: rgba(0, 0, 0, 0.85);
     letter-spacing: 0.05em;
-    padding: 2rem;
+    padding: 1.5rem 4rem 0 4rem;
 
 
     p, li, table {
@@ -148,6 +148,11 @@ body.principle-Awesome{
         vertical-align: middle;
         display: table-cell;
         height: $spot-size;
+    }
+
+    blockquote{
+        font-style: italic;
+        font-size: 1.2em;
     }
 }
 
