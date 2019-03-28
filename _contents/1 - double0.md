@@ -1,6 +1,7 @@
 ---
 title: test1
-
+background: white
+layoutclass: half-n-half
 ---
 {:class="image"}
 ![Double0](../assets/images/double0.png)  

@@ -129,38 +129,62 @@ nav.navbar-inverse, nav.navbar-light{
   section{
     padding-top: 1em;
     padding-bottom: 1em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow:auto;
+    overflow-x: hidden;
   }
 }
+.excerpt{
+  font-size: 85%;
+}
+.image{
+  width: 55%;
+  float:left;
+  margin-left: -1em;
+  margin-right: 1em;
+  margin-bottom: 0;
+  margin-block-end: 0;
+}
+.image.quarter{
+  width: 25%;
+  float:left;
+  margin-left: -1em;
+  margin-right: 1em;
+  margin-bottom: 0;
+  margin-block-end: 0;
+}
+.image.right{
+  float:right;
+  margin-left: 1em;
+  margin-right: -1em;
+  margin-bottom: 0;
+  margin-block-end: 0;
+}
+.image+p{
+  display: inline-block;
+  width:45%;
+  padding-top: 1em;
+}
+.image.quarter+p{
+  width:75%;
+}
 
+.shadowed{
+  filter: drop-shadow(7px 5px 3px lightgray);
+}
 
 .half-n-half{
   img{
     width: 100%;
   }
-  .image{
-    width: 55%;
-    float:left;
-    margin-left: -1em;
-    margin-right: 1em;
-    margin-bottom: 0;
-    margin-block-end: 0;
-}
-  .image.right{
-    float:right;
-    margin-left: 1em;
-    margin-right: -1em;
-    margin-bottom: 0;
-    margin-block-end: 0;
-}
   p, h3{
     display: inline-block;
     width:45%;
   }
   .fullwidth{
     width: 100%;
-  }
-  .excerpt{
-    font-size: 80%;
   }
   hr{
     line-height: 2em;
@@ -189,15 +213,18 @@ blockquote {
 .bg-orange{
   background: rgba(244, 137, 66, 0.5);
 }
+.circle, .circle > img{
+  border-radius: 50%;
+}
 
 .christchurch{
   background-image: url('../images/christchurch2.png');
 }
 footer{
   clear: both;
-  background: rgba(0,0,0,0.1);
   padding: 1em 1em;
   margin-top: 3rem;
+  text-align: center;
 }
 
 footer div{
