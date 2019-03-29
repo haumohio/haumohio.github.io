@@ -1,10 +1,10 @@
 ---
 title: Services
 background: url('/assets/images/dev-dark.png')
-layoutclass: section-dark
+layoutclass: section-dark centered
 ---
 
-### Over 20 years of experience delivering software and consulting on software products.
+# Over 20 years of experience delivering software and consulting on software products.
 
 {:class="fa fa-4x fa-code triple"}
 &nbsp;
@@ -31,13 +31,13 @@ in topics such as continuous delivery, software design, and micro-testing
 
 {:class="triple unfeatured"}
 ![Fire Behaviour Calculator](/assets/images/fb_calc.png)
-Fire Behaviour Calculator based on algorithms developed [Scion Research](https://scionresearch.com) to help rural fire fighters predict fires
+Fire Behaviour Calculator based on algorithms developed [Scion Research](https://scionresearch.com){:target="_blank"} to help rural fire fighters predict fires
 
 {:class="triple featured"}
 ![Seequent licence monitor](/assets/images/leapfrog3d_landscape.png)
-Dedicated project to add a licence consumption reporting portal for used of the [Seequent's](https://www.seequent.com/) products.<br/>
+Dedicated project to add a licence consumption reporting portal for used of the [Seequent's](https://www.seequent.com/){:target="_blank"} products.<br/>
 An interesting project involving collation of Kinesis stream events from a DynamoDB via series of Lambda functions and SQS queues into an Elastic Beanstalk hosted API and web portal.
 
 {:class="triple unfeatured"}
 ![Xtendlife website](/assets/images/xtendlife.png)
-Working as part of the [Xtend-Life](https://xtend-life.com/) team to increase the sophistication of the connection between the sales and ordering backend to the marketing website.
+Working as part of the [Xtend-Life](https://xtend-life.com/){:target="_blank"} team to increase the sophistication of the connection between the sales and ordering backend to the marketing website.

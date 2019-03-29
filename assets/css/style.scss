@@ -146,6 +146,20 @@ nav.navbar-inverse, nav.navbar-light{
       color: rgba(255,255,255,0.8);
     }
   }
+  p.assoc-badge{
+    display: inline-block;
+    max-width: 20rem;
+    vertical-align: baseline;
+    bottom: 0;
+    text-align: center;
+  }
+  .assoc-badge > img{
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .centered{
+    text-align: center;
+  }
 }
 
 .markdown-body.sectioned{
