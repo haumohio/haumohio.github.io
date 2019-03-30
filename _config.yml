@@ -1,6 +1,7 @@
 title: Haumohio
 description: The wind of information
 exclude: [README.md]
+include: [".well-known"]
 
 # applies pretty for all
 permalink: pretty
