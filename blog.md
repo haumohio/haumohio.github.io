@@ -11,7 +11,7 @@ class: christchurch
 ### [{{ titles  | array_to_sentence_string: "-" }}]({{post.url}})
 
 {:class="byline"}
-({{post.date | date_to_string}} - {{post.tags | array_to_sentence_string}})
+({{post.date | date_to_string}} with tags {{post.tags | array_to_sentence_string}})
 
 {{post.excerpt}}
 

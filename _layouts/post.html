@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="/assets/css/monokai.min.css" >
     </head>
-  <body class={page-class}>
+  <body class={{page.page-class}}>
     <div>
         <div class="head-container" style="background-image: url('/assets/post_images/{{page.image}}');">
             <nav id="navbar" class='navbar navbar-{{page.navbar-class | default: "dark"}} navbar-expand-md'>
@@ -40,10 +40,15 @@
 
       </section>
       <footer >
-        <label>Tags:</label>
-        {% for tag in page.tags %}
-          <span href="{{ post.url }}">{{ tag }},</span>
-        {% endfor %}
+        <label>Published:</label> <span>{{ page.date | date_to_string }}</span> | 
+        <label>Tags:</label><span>{{ page.tags | array_to_sentence_string }}</span> | 
+        {% capture hashtags %}
+          {% for tag in page.tags %}#{{ tag | replace: ' ', ''}} {% endfor %}
+        {% endcapture %}
+        {% capture rawtweet %}
+          @PeterChch posted "{{page.title}} - {{page.description}}" at {{page.url | prepend: site.url}} {{hashtags | lstrip }}
+        {% endcapture %}
+        <a href='https://twitter.com/intent/tweet?text={{rawtweet | strip | url_encode }}' target="_blank"/><i class="fa fa-twitter"></i>  Tweet this</a>
       </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

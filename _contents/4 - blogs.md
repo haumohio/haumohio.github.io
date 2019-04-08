@@ -10,7 +10,7 @@ background: url('/assets/images/blog2.png')
 ### [{{ titles  | array_to_sentence_string: "-" }}]({{site.posts.first.url}})
 
 {:class="excerpt"}
-({{site.posts.first.date | date_to_string}} - {{site.posts.first.tags | array_to_sentence_string}})
+({{site.posts.first.date | date_to_string}} with tags _{{site.posts.first.tags | array_to_sentence_string}}_)
 
 {:class="excerpt"}
 {{ site.posts.first.excerpt }}
