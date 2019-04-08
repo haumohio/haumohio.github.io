@@ -4,69 +4,49 @@ https://keybase.io/peterchch
 
 I hereby claim:
 
-  * I am an admin of http://haumohio.com
+  * I am an admin of https://haumohio.com
   * I am peterchch (https://keybase.io/peterchch) on keybase.
-  * I have a public key with fingerprint 4401 16E0 0701 1360 BF78  767D D4E4 4952 FB69 8034
+  * I have a public key ASDsOYz07PGayr4v5ZJYTYy2Ww2nGeGw_QBzcfn-Um_JOgo
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "client": {
-            "name": "keybase.io node.js client",
-            "version": "0.7.9"
-        },
-        "key": {
-            "fingerprint": "440116e007011360bf78767dd4e44952fb698034",
-            "host": "keybase.io",
-            "key_id": "D4E44952FB698034",
-            "uid": "ae16067a93fdbc3912568d4bf5007519",
-            "username": "peterchch"
-        },
-        "merkle_root": {
-            "ctime": 1434256731,
-            "hash": "579d6f96d6a28264a44afb4e554130c763dba7339307118c4b37a199b600ca2c4331a02df229e3b810fbcddd425663cbe166eb6ca01df6f3f2a495d3a561b5f5",
-            "seqno": 246428
-        },
-        "service": {
-            "hostname": "haumohio.com",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "0101e0bffcc105e5f71057b88809fd2f68f125673e0fad9010ce62fe1d342627527c0a",
+      "host": "keybase.io",
+      "kid": "0120ec398cf4ecf19acabe2fe592584d8cb65b0da719e1b0fd007371f9fe526fc93a0a",
+      "uid": "ae16067a93fdbc3912568d4bf5007519",
+      "username": "peterchch"
     },
-    "ctime": 1434256929,
-    "expire_in": 157680000,
-    "prev": "9ecdea32ffa05110cd965b4123bd8f3ae3a879733f6ed85930109d43d71f41c6",
-    "seqno": 2,
-    "tag": "signature"
+    "merkle_root": {
+      "ctime": 1554086873,
+      "hash": "3626e98e5d02397d00ec8031b7a26cef4afc7e921b28cb29be04494e5718dbf778e114a1b2519a66095465bd5f7a614151acafbf2601dac99013fda3d54daceb",
+      "hash_meta": "fd66cd57ce0fbe39f231032c74b58cfa3c8e755fef361f26ccba8dbc9145e22b",
+      "seqno": 5068648
+    },
+    "service": {
+      "entropy": "Wxw8vvrHYIaS8/0iLig5LH5+",
+      "hostname": "haumohio.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1554086904,
+  "expire_in": 504576000,
+  "prev": "07c0ea1428b58cd1f75e9cd9507fffaaa67bdb85146a2764a8cc51d441094146",
+  "seqno": 28,
+  "tag": "signature"
 }
 
 which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Version: GnuPG v1.4.13 (MingW32)
-
-owFVkl1sFUUYhs8ppUEJCJigERLKJk0F62FmZ3Z253BBUqxgkQgmKgHqyfz2LG3P
-Lrvb1tocAm1MNVEhAaTEHxINCSgCKYafookxgLGmBlIxSkyk3mHAGmnpDUFnm2pg
-b3Zn5/ne73vfmT1zZmQqssM13vqP+q99m/3+Bs+8VK5a2m3xQHZZ+W5LtPqqlKRf
-JdamrLzVoro4i1XOD6pLgVS5bXH1NFNndago9oOSoUDOzVGrXJfiabH2S80qCiM/
-1bIwBhASBYBr3ogArl3PJa6UWGFMHVtzQj2AsJEsBnHyQFdrSrPgS/P3GdwwxT9b
-/z/fPrXBFCSAuIwiLblAFNoO8STm2jE9HUhTMFbRtKVQJSoSRVFMB25TUUurKkRB
-MOVaJH7KQIyw0XARNCOxuGiqHJdKoimRhNmeTTDDmGmOleNgiIBwCZKcuQhRBFwI
-PYE5chmklBMABLMFRggyYEtt21Qh7kGguZAmA9OHIMGNBaI4EQxAqYlG2mbGq0TM
-IZA72jEeYrW9FFh5GxNse+V0HXX4QqVzp7lN2yuy9rag6Ac5EbSZojAKkkAErelO
-koT51HTSFaZkp+LHC9MiBe6XpDm1+48VGvTBQKhN6yz1WuhHquCnhOMSD5gn7aM6
-jCZVQiqGbK0ZcCAEQlLicAxtxKWnEVOIeS41OWmipOeYtCCgEiPpQo2hIPfZNHOy
-ZiMZ+80llrRHyiq/lV1cmclWZKpmVqT3NvPwQ/P+u8w9Q7My+544vzI89k5+bEeD
-3Prmwubnv34/e2Xj4NgjNeHbq6MZFxeE55tub/hyfh29+8f+Pc7rnf88OnS0YXNr
-fe7pgUW/nfip6fGdvbUHGg+Q3X/t/t0duGVl1/QMq6OPfTVxrfZ4tPbn4fHlp9ft
-XbB2y3fPXbq+BP/4yqELmwe/OFOcNXbzh944f2JV47yDeP66ptz1Tfut0fE/P9ux
-YnLi75qn6kf7BnqXrygeuTy5Zt/cTbWHz5b9yZbPF/X3vfDpx7Ora9b31F599ciV
-7ZUrf7m691B5ZPjyhP3hNxNVL87J/nrszLahd9nIjWV3KjsrPth1UN6pXvzJ0nOn
-Tw2+d68/0/jk5MnR7r6Xt6waf2Pk3L8=
-=jQrz
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7DmM9Ozxmsq+L+WSWE2MtlsNpxnhsP0Ac3H5/lJvyToKp3BheWxvYWTESpcCHMQgB8DqFCi1jNH3XpzZUH//qqZ724UUaidkqMxR1EEJQUbEIF0Q+YTc+oIgaCs32HpE3cYepsxcF9EyMTBol2/TDKieAgHCo3NpZ8RAg2uwBr0YsrawlXQhil3X3Bx+QzcJeiEoc3h60EgflgYQFPOFshXnf/akYKWfSnGza0Kyejqj9eSVlNKcYAwtAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKqD1kJptWM+h8CjZzjSsn/IduC1pnZGVCTyC4+/D7Xfo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
