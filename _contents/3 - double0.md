@@ -2,6 +2,7 @@
 title: test1
 background: white
 layoutclass: half-n-half
+dest: main
 ---
 {:class="image"}
 ![Double0](../assets/images/double0.png)  

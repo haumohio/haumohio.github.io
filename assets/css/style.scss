@@ -146,17 +146,6 @@ nav.navbar-inverse, nav.navbar-light{
       color: rgba(255,255,255,0.8);
     }
   }
-  p.assoc-badge{
-    display: inline-block;
-    max-width: 20rem;
-    vertical-align: baseline;
-    bottom: 0;
-    text-align: center;
-  }
-  .assoc-badge > img{
-    max-height: 100%;
-    max-width: 100%;
-  }
   .centered{
     text-align: center;
   }
@@ -164,6 +153,18 @@ nav.navbar-inverse, nav.navbar-light{
     font-size: 80%;
     text-align: center;
   }
+}
+
+.assoc-badge{
+  display: inline-block;
+  vertical-align: text-bottom;
+  bottom: 0;
+  text-align: center;
+  padding: 0 1em;
+}
+.assoc-badge  img{
+  max-height: 3rem;
+  max-width: 100%;
 }
 
 .markdown-body.sectioned{
@@ -179,6 +180,7 @@ nav.navbar-inverse, nav.navbar-light{
     overflow-x: hidden;
   }
 }
+
 .excerpt{
   font-size: 85%;
 }
@@ -251,7 +253,7 @@ blockquote {
     margin: 0 0;
   }
 }
-.post.markdown-body{
+.post.markdown-body, .markdown-body.cappedwidth{
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;

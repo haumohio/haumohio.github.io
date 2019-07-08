@@ -2,6 +2,7 @@
 title: Services
 background: url('/assets/images/dev-dark.png')
 layoutclass: section-dark centered
+dest: main
 ---
 
 # Over 20 years of experience delivering software and consulting on software products.

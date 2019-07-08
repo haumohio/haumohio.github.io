@@ -1,16 +1,17 @@
 ---
 title: Associations
 layoutclass: centered
+dest: footer
 ---
 
 {:class="assoc-badge shadowed"}
-![FSharp Foundation](/assets/images/fsharp256.png)<br/>
-Member of the F# foundation
+{:title="Member of the F# foundation"}
+[![FSharp Foundation](/assets/images/fsharp256.png)](http://foundation.fsharp.org/member_roster)<br/>
 
 {:class="assoc-badge shadowed"}
-![Professional Scrum Master & Developer](/assets/images/psd_psm.png)<br/>
-Professional Scrum Master and Developer
+{:title="Professional Scrum Master and Developer"}
+[![Professional Scrum Master & Developer](/assets/images/psd_psm.png)](https://www.scrum.org/certification-list)<br/>
 
 {:class="assoc-badge shadowed"}
-![Canterbury Tech Cluster](/assets/images/canterbury.png)<br/>
-Member of the Canterbury Tech Cluster
+{:title="Member of the Canterbury Tech Cluster"}
+[![Canterbury Tech Cluster](/assets/images/canterbury.png)](https://canterburytech.nz/)<br/>

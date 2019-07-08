@@ -1,6 +1,7 @@
 ---
 title: Blogging
 background: url('/assets/images/blog2.png')
+dest: main
 ---
 
 # A recent blog...

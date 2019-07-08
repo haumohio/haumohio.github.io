@@ -2,6 +2,7 @@
 title: Haumohio Blog
 description: a word or two 
 layout: default
+layoutclass: cappedwidth
 class: christchurch
 ---
 

@@ -9,11 +9,11 @@ excerpt_separator: <!--more-->
 ---
 
 Every project should ideally start off with considering how to show something to the stakeholders in the first day, and providing a mechanism to allow those stakeholders to provide feedback as simply as possible.
+<!--more-->
 
 {:class="shadowed"}
 ![feedback loop - build, measure, learn](/assets/post_images/feedback_loop.png)
 
-<!--more-->
 
 ## Background
 
