@@ -36,7 +36,7 @@ Fire Behaviour Calculator based on algorithms developed [Scion Research](https:/
 
 {:class="triple featured"}
 ![Seequent licence monitor](/assets/images/leapfrog3d_landscape.png)
-Dedicated project to add a licence consumption reporting portal for used of the [Seequent's](https://www.seequent.com/){:target="_blank"} products.<br/>
+Dedicated project to add a licence consumption reporting portal for [Seequent's](https://www.seequent.com/){:target="_blank"} flagship products.<br/>
 An interesting project involving collation of Kinesis stream events from a DynamoDB via series of Lambda functions and SQS queues into an Elastic Beanstalk hosted API and web portal.
 
 {:class="triple unfeatured"}
