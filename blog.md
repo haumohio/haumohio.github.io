@@ -14,6 +14,7 @@ class: christchurch
 {:class="byline"}
 ({{post.date | date_to_string}} with tags {{post.tags | array_to_sentence_string}})
 
+{:class="published{{post.published}}"}
 {{post.excerpt}}
 
 [read more >]({{post.url}})

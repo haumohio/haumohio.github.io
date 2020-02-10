@@ -253,7 +253,7 @@ blockquote {
     margin: 0 0;
   }
 }
-.post.markdown-body, .markdown-body.cappedwidth{
+.post.markdown-body, .markdown-body.cappedwidth, .cappedwidth{
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -278,6 +278,20 @@ footer{
 
 footer div{
   display: inline-block;
+}
+
+.publishedfalse {
+    outline: red 2px solid;
+}
+
+.padded1em {
+    h1, h2, h3 , h4, p {
+        padding: 0 20px;
+    }
+    .excerpt {
+        max-width: 1000px;
+        margin-right: auto;      
+    }
 }
 
 @media screen and (max-width: 600px) {

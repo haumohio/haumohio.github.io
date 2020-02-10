@@ -7,25 +7,19 @@ dest: main
 
 # Over 20 years of experience delivering software and consulting on software products.
 
-{:class="fa fa-4x fa-code triple"}
-&nbsp;
-
-{:class="fa fa-4x fa-heartbeat triple"}
-&nbsp;
-
-{:class="fa fa-4x fa-book triple"}
-&nbsp;
-
 {:class="triple"}
-Development of bespoke software, or as a member of your own development team. <br/>
+<i class="fa fa-4x fa-code"></i>  
+Development of bespoke software, or as a member of your own development team.  
 In the cloud, on a mobile platform, as a micro-service, or an API
 
 {:class="triple"}
-Continuous delivery of value from feature to customer.  <br/>
-Automation of the development and quality assurance pipeline all the way through to measuring the health and value of the deployed solutions.
+<i class="fa fa-4x fa-heartbeat"></i>  
+Continuous delivery of value from feature to customer.  
+Automation of the development and quality assurance pipeline all the way through to measuring the health and value of the deployed solutions
 
 {:class="triple"}
-Train your own software development team  <br/>
+<i class="fa fa-4x fa-book"></i>  
+Train your own software development team.   
 in topics such as continuous delivery, software design, and micro-testing
 
 ## Some recent development projects...
