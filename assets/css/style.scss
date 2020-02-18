@@ -27,6 +27,9 @@
 body {
   // background-image: url('../images/bg.png');
 }
+a {
+    color: #0072ed;  // according to pa11y
+}
 .head-container{
   background-size: cover;
   background-position: center center;
