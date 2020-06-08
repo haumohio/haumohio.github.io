@@ -1,6 +1,7 @@
 ---
 title: About
 dest: main
+layoutclass: follow-0
 ---
 
 

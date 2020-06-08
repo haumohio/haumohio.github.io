@@ -1,7 +1,7 @@
 ---
 title: Blogging
 background: url('/assets/images/blog2.png')
-layoutclass: padded1em
+layoutclass: padded1em inverse
 dest: main
 ---
 

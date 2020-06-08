@@ -24,11 +24,25 @@
   font-style: normal;
 }
 
+$primary-bg: #222;
+$primary-fg: #eee;
+$primary-shadow: #000;
+$primary-link: #0072ed;
+
+$secondary-bg: rgba(244, 137, 66, 0.5);
+
+$inverse-bg: #eee;
+$inverse-fg: #222;
+$inverse-shadow: #fff;
+$inverse-link: #0072ed;
+
 body {
   // background-image: url('../images/bg.png');
+  background-color: $primary-bg;
+  color: $primary-fg;
 }
 a {
-    color: #0072ed;  // according to pa11y
+  color: $primary-link;
 }
 .head-container{
   background-size: cover;
@@ -54,16 +68,16 @@ header{
 }
 @media (max-width: 768px){
   nav {
-    background: rgba(255,255,255,0.3);
+    background: rgba(0,0,0,0.3);
   }
 }
 
 .shadowed{
-  text-shadow: 3px 3px 6px white;
+  text-shadow: 3px 3px 6px $primary-shadow;
 }
 .inverse-shadowed{
-  color: white;
-  text-shadow: 3px 3px 6px black;
+  color: $primary-fg;
+  text-shadow: 3px 3px 6px $primary-shadow;
 }
 nav.navbar-dark, nav.navbar-inverse{
   .navbar-nav{
@@ -85,13 +99,13 @@ nav.navbar-inverse, nav.navbar-light{
   padding: 1em;
   font-family: Programming;
   h2{
-    text-shadow: 2px 2px 10px gray;
+    text-shadow: 2px 2px 10px $primary-shadow;
     font-family: ProgHead;
     font-size: 200%;
     text-indent: 2em;
   }
   h3{
-    text-shadow: 2px 2px 10px gray;
+    text-shadow: 2px 2px 10px $primary-shadow;
     clear: both;
 
   }
@@ -144,7 +158,7 @@ nav.navbar-inverse, nav.navbar-light{
     max-width: 100%;
   }
   .section-dark{
-    color: white;
+    color: $primary-fg;
     a, a:visited {
       color: rgba(255,255,255,0.8);
     }
@@ -182,6 +196,12 @@ nav.navbar-inverse, nav.navbar-light{
     overflow:auto;
     overflow-x: hidden;
   }
+
+}
+
+.follow-0{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .excerpt{
@@ -209,6 +229,7 @@ nav.navbar-inverse, nav.navbar-light{
   margin-right: -1em;
   margin-bottom: 0;
   margin-block-end: 0;
+  text-align: right;
 }
 .image+p{
   display: inline-block;
@@ -220,7 +241,7 @@ nav.navbar-inverse, nav.navbar-light{
 }
 
 .shadowed{
-  filter: drop-shadow(7px 5px 3px lightgray);
+  filter: drop-shadow(7px 5px 3px $primary-shadow);
 }
 
 .half-n-half{
@@ -263,7 +284,7 @@ blockquote {
 }
 
 .bg-orange{
-  background: rgba(244, 137, 66, 0.5);
+  background: $secondary-bg;
 }
 .circle, .circle > img{
   border-radius: 50%;
@@ -297,6 +318,26 @@ footer div{
     }
 }
 
+.inverse {
+  color: $inverse-fg;
+  background-color: $inverse-bg;
+  a{
+    color: $inverse-link;
+  }
+  
+}
+.markdown-body {
+  .inverse{
+    h2{
+      text-shadow: 2px 2px 10px $inverse-shadow;
+
+    }
+    h3{
+      text-shadow: 2px 2px 10px $inverse-shadow;
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
   header h1 {font-size: 12vw;}
   header h2{ font-size: 8vw;}
@@ -307,11 +348,12 @@ footer div{
       margin: auto;
       margin-bottom: 0;
       margin-block-end: 0;
+      text-align: right;
     }
     p, h3, blockquote{
       display: inherit;
       width: unset;
-      padding: 0;
+      padding: 0 0.8em ;
       margin-top: 1em;
       text-align: left;
     }
@@ -323,6 +365,9 @@ footer div{
     h2{
       text-indent: 0;
       font-size: 2rem;
+    }
+    .image.quarter+p{
+      width:unset;
     }
   }
 }
