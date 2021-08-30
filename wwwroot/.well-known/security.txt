@@ -1,0 +1,3 @@
+Contact: mailto:security@haumohio.com
+Contact: https://twitter.com/peterchch
+Encryption: https://keybase.io/peterchch

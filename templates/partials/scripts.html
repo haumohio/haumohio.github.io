@@ -1,0 +1,12 @@
+<script >
+function changeCss () {
+  var bodyElement = document.querySelector("body");
+  var navElement = document.querySelector("nav");
+  if(this.scrollY > navElement.clientHeight){
+    navElement.classList.add("scrolled")
+  }else{
+    navElement.classList.remove("scrolled")
+  }
+}
+window.addEventListener("scroll", changeCss , false);
+</script>

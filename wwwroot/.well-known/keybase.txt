@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/peterchch
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://haumohio.com
+  * I am peterchch (https://keybase.io/peterchch) on keybase.
+  * I have a public key ASDsOYz07PGayr4v5ZJYTYy2Ww2nGeGw_QBzcfn-Um_JOgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101e0bffcc105e5f71057b88809fd2f68f125673e0fad9010ce62fe1d342627527c0a",
+      "host": "keybase.io",
+      "kid": "0120ec398cf4ecf19acabe2fe592584d8cb65b0da719e1b0fd007371f9fe526fc93a0a",
+      "uid": "ae16067a93fdbc3912568d4bf5007519",
+      "username": "peterchch"
+    },
+    "merkle_root": {
+      "ctime": 1554086873,
+      "hash": "3626e98e5d02397d00ec8031b7a26cef4afc7e921b28cb29be04494e5718dbf778e114a1b2519a66095465bd5f7a614151acafbf2601dac99013fda3d54daceb",
+      "hash_meta": "fd66cd57ce0fbe39f231032c74b58cfa3c8e755fef361f26ccba8dbc9145e22b",
+      "seqno": 5068648
+    },
+    "service": {
+      "entropy": "Wxw8vvrHYIaS8/0iLig5LH5+",
+      "hostname": "haumohio.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1554086904,
+  "expire_in": 504576000,
+  "prev": "07c0ea1428b58cd1f75e9cd9507fffaaa67bdb85146a2764a8cc51d441094146",
+  "seqno": 28,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7DmM9Ozxmsq+L+WSWE2MtlsNpxnhsP0Ac3H5/lJvyToKp3BheWxvYWTESpcCHMQgB8DqFCi1jNH3XpzZUH//qqZ724UUaidkqMxR1EEJQUbEIF0Q+YTc+oIgaCs32HpE3cYepsxcF9EyMTBol2/TDKieAgHCo3NpZ8RAg2uwBr0YsrawlXQhil3X3Bx+QzcJeiEoc3h60EgflgYQFPOFshXnf/akYKWfSnGza0Kyejqj9eSVlNKcYAwtAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKqD1kJptWM+h8CjZzjSsn/IduC1pnZGVCTyC4+/D7Xfo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/peterchch
+
+==================================================================
