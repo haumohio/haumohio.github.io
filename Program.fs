@@ -4,11 +4,12 @@ open System.IO
 let outputDir = "docs/"
 let resourceDir = "wwwroot/"
 let templateDir = "templates/"
+let partialDir = templateDir + "partials"
 
 let partials = 
-  Directory.GetFiles(templateDir + "partials")
+  Directory.CreateDirectory(partialDir).GetFiles()
   |> Array.map ( fun f -> 
-    (f |> Path.GetFileNameWithoutExtension, f |> File.ReadAllText)
+    (f.Name |> Path.GetFileNameWithoutExtension, f.FullName |> File.ReadAllText)
   )
 
 let insertPartials (content: string) =
@@ -22,6 +23,8 @@ let insertPartials (content: string) =
   
 
 let processSite() =
+  Directory.CreateDirectory(templateDir) |> ignore
+  Directory.CreateDirectory(outputDir) |> ignore
   let files = Directory.GetFiles(templateDir)
   files 
   |> Array.map (fun f -> 
@@ -32,7 +35,7 @@ let processSite() =
     File.WriteAllText(outputDir + filename, content)
   )
   |> ignore
-
+  Directory.CreateDirectory(resourceDir) |> ignore
   let resources = Directory.GetFiles(resourceDir, "*", SearchOption.AllDirectories)
   resources 
   |> Array.map (fun f -> 
@@ -45,7 +48,6 @@ let processSite() =
 
 [<EntryPoint>]
 let main argv =
-    Directory.Delete(outputDir, true) |> ignore
-    Directory.CreateDirectory(outputDir) |> ignore
-    processSite() 
-    0 // return an integer exit code
+  if Directory.Exists(outputDir) then Directory.Delete(outputDir, true) |> ignore
+  processSite() 
+  0 // return an integer exit code
