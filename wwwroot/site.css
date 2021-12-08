@@ -44,11 +44,15 @@ nav {
 nav img {
   max-height: 2em;
   vertical-align: middle;
+  filter: invert(1);
 }
 nav.scrolled {
   color: black;
   opacity: 0.5;
   background-color: white;
+}
+nav.scrolled img{
+  filter: invert(0)
 }
 nav a {
   font-style: normal;
