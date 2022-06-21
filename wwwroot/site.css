@@ -109,6 +109,8 @@ section.white, .white h2, .white h3{
 .profile-pic {
   float: right;
   border-radius: 50%;
+  margin-top: -3em;
+  width: 20%;
 }
 
 .triple {
@@ -159,11 +161,12 @@ img.badge {
     padding-right: inherit;
   }
   .profile-pic {
-    float: none;
-    text-align: center;
+    margin-top: 0;
+    width: 33%;
   }
   footer span{
     display: block;
+    font-size: 80%;
   }
   h1{
     font-size: 300%;
@@ -173,5 +176,12 @@ img.badge {
   }
   h3, h4{
     font-size: 120%;
+  }
+  img.badge {
+    display: inline-block;
+    margin: 0.5em;
+    width: 25%;
+    height: auto;
+    vertical-align: middle;
   }
 }
