@@ -72,6 +72,20 @@ p.indent {
   margin-left: 1em;
 }
 
+#contacts{
+  font-size: 80%;
+}
+#contacts i {
+  width: 1.2em;
+}
+.profile {
+  position: absolute;
+  left: 26px;
+  top: 22px;
+  height: 12em;
+  z-index: -1;
+}
+
 @media print, (min-width : 768px) {
   .col-sm-4{
       border-left: 1px solid #eee;
