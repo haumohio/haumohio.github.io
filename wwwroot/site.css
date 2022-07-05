@@ -10,6 +10,10 @@ body{
   font-size: 20px;
 }
 
+body.about {
+  background-color: #031733;
+}
+
 h1 {
   text-align: center;
   font-size: 600%;
@@ -72,6 +76,9 @@ footer span {
 footer a {
   font-style: normal;
 }
+.about footer{
+  background-color: transparent;
+}
 
 img {
   max-width: 95%;
@@ -88,6 +95,10 @@ section{
 }
 section.full-height {
   min-height: 100%;
+}
+
+.about section {
+  background-color: transparent;
 }
 
 section.white, .white h2, .white h3{
@@ -146,6 +157,10 @@ img.badge {
   display: inline-block;
   margin: 1em;
 }
+img.badge.subbadge {
+  margin-left: -1em; 
+  height: 2.4em;
+}
 
 @media screen and (max-width: 700px) {
   .triple{
@@ -170,9 +185,11 @@ img.badge {
   }
   h1{
     font-size: 300%;
+    margin-block-start: 1em;
   }
   h2{
     font-size: 150%;
+    margin-block-start: 1em;
   }
   h3, h4{
     font-size: 120%;
@@ -183,5 +200,12 @@ img.badge {
     width: 25%;
     height: auto;
     vertical-align: middle;
+  }
+  img.badge.subbadge {
+    margin-left: -0.5em;
+    width: 9%;
+    height: auto;
+    vertical-align: bottom;
+    bottom: 0;
   }
 }
