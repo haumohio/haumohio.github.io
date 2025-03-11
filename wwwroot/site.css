@@ -60,6 +60,9 @@ nav.scrolled img{
 }
 nav a {
   font-style: normal;
+  max-width: 6em;
+  text-align: center;
+  display: inline-block;
 }
 
 footer{
@@ -207,5 +210,18 @@ img.badge.subbadge {
     height: auto;
     vertical-align: bottom;
     bottom: 0;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  nav a {
+    font-size: 75%;
+    display: inline;
+    text-align: right;
+  }
+  nav > div {
+    max-width: 160px;
+    text-align: right;
   }
 }
