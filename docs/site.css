@@ -164,6 +164,22 @@ img.badge.subbadge {
   margin-left: -1em; 
   height: 2.4em;
 }
+.logos{
+  text-align: center;
+}
+
+.logos div {
+  width: 184px;
+  height: 100px;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin: 20px;
+  border: 20px solid transparent;
+  border-radius: 6px;
+}
 
 @media screen and (max-width: 700px) {
   .triple{
