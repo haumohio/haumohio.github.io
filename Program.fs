@@ -20,21 +20,29 @@ let insertPartials (content: string) =
       let replacement = snd p
       c.Replace( lookup, replacement)
     ) content
-  
 
-let processSite() =
-  Directory.CreateDirectory(templateDir) |> ignore
-  Directory.CreateDirectory(outputDir) |> ignore
-  let files = Directory.GetFiles(templateDir)
+let processFolder relDir =
+  Directory.CreateDirectory $"{outputDir}{relDir}" |> ignore
+  let files = Directory.GetFiles $"{templateDir}{relDir}"
+  printfn "Processing %d files in %A" files.Length relDir
   files 
   |> Array.map (fun f -> 
     let filename = Path.GetFileName f
     let content = 
       File.ReadAllText f
       |> insertPartials
-    File.WriteAllText(outputDir + filename, content)
+    File.WriteAllText($"{outputDir}{relDir}/{filename}", content)
   )
   |> ignore
+
+let processSite() =
+  Directory.CreateDirectory templateDir |> ignore
+  Directory.CreateDirectory outputDir |> ignore
+  Directory.GetDirectories templateDir
+    |> Array.map Path.GetFileName
+    |> Array.except [| "partials"|]
+    |> Array.append [|""|]
+    |> Array.iter processFolder
   Directory.CreateDirectory(resourceDir) |> ignore
   let resources = Directory.GetFiles(resourceDir, "*", SearchOption.AllDirectories)
   resources 
