@@ -1,0 +1,94 @@
+<html>
+  <head>
+      <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
+<!-- Search Engine -->
+<meta name="description" content="" />
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="Haumohio" />
+<meta itemprop="description" content="N" />
+<!-- Open Graph general (Facebook, Pinterest, etc.) -->
+<meta property="og:title" content="Haumohio">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://haumohio.com/images/logo.png" />
+<meta property="og:url" content="https://haumohio.com" />
+<meta property="og:site_name" content="Haumohio" />
+<meta property="og:locale" content="en_NZ" />
+<!-- <meta property="fb:admins" content="100001421670439">
+<meta property="fb:app_id" content="335782529773277"> -->
+<meta property="og:type" content="website" />
+
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<link rel="canonical" href="https://haumohio.com/">
+      
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
+<link href="/site.css" rel="stylesheet" />
+      <title>Haumohio Software</title>
+  <script>
+pagevars={}
+pagevars.layout="blog"
+pagevars.title="Two-way type providers"
+</script>
+</head>
+  <body >
+    <h1 id="two-way-type-providers">Two-way type providers</h1>
+<p>The magic of compiled data sources that change value when you look at them</p>
+<p><img src="images/blog/1_pD0pryn_LdQApRZEbALBhQ.png" alt="" /></p>
+<p>In the previous articles I focused on some patterns that can be used in your own code to manage changing data. This time I’m looking at a mechanism that’s actually <strong>built-in to the F# language</strong>. As such, this may or may not apply to other functional languages.</p>
+<h2 id="type-providers">Type Providers</h2>
+<blockquote>
+<p>A Type Provider is a feature that produces structures &amp; types at <strong>compile-time</strong> for coding auto-complete and live data access at run-time.</p>
+</blockquote>
+<p>Personally, I struggled with the concept when I came across it. The data source (or at least one that is structurally identical) needs to be <strong>accessible at compile-time</strong> for both the developer and any build server you may have. In fact, if you want to use it for auto-completion of code then you will need access at that point in time too.</p>
+<p>Note that if the data source is slow, then compiling/auto-completion will be slowed down too. In fact, if the data source is unavailable (e.g. a third party source that has issues) then compilation will fail.</p>
+<p>All-in-all it felt a little <em>dirty</em> to me to couple the data artefacts with the source code so closely, but I have made peace with this requirement in the interest of <strong>keeping data and code in sync</strong> in such an explicit manner. The trick is to use a connection string in the config file that points to an empty canonical data source internally for building, and a live data source (with identical structure!) in production.</p>
+<h2 id="getting-data">Getting data</h2>
+<p>For this article I’ll reference the <a href="http://fsprojects.github.io/SQLProvider/">SQLProvider</a> with SQL Server, as it is very similar to linq-to-sql for .NET developers. It has a data context that follows a repository pattern and even includes method like <em>SubmitChanges()</em> to publish the unit of work in a transaction.</p>
+<p>To get the data from a database it is a simple as creating a type that is parameterised with the connection string, referencing the current data context and hitting ‘dot’ to get a list of tables and then columns.</p>
+<pre><code class="language-fsharp">#r &quot;FSharp.Data.SQLProvider.dll&quot;
+open FSharp.Data.Sql
+
+type myDB = SqlDataProvider&lt;&quot;connStringName&quot;&gt;
+let customers = myDB.GetDataContext().Customers
+</code></pre>
+<p>This is where the magic happens !  Each time this code is called, the program will get the current data from the table. So is the code mutable or immutable?!? 😉</p>
+<h2 id="changing-the-external-data">Changing the external data</h2>
+<p>The SqlProvider has pretty good docs, and includes simple <a href="http://fsprojects.github.io/SQLProvider/core/crud.html">CRUD</a> operations.</p>
+<pre><code class="language-fsharp">type myDB = SqlDataProvider&lt;&quot;connStringName&quot;&gt;
+let cxt = myDB.GetDataContext()
+let customers = cxt.Customers
+
+//change the name of the first customer and save
+let cust1 = customers.First()  
+cust1.FirstName &lt;- &quot;Peter&quot;  
+cxt.SubmitChanges()
+let cust1Updated = customers.First()
+let SUCCESS = ( cust1Updated.FirstName = &quot;Peter&quot; )
+</code></pre>
+<p>As you may have noticed the data that comes from the data source is <em>mutable.</em> In order to update the database I need to mutate an element in the context and submit the change … ugh! I have yet to find a simple solution for this that I like.</p>
+<p>Note that the above code has an <strong>error</strong> that would make <code>SUCCESS=false</code>. The <em>cxt.Customers</em> property has a getter (which is just a pretty function) that may return different values each time, and F# copes with that. However, my <em>customers</em> value is a immutable value that once evaluated doesn’t change. In my early days this kind of bug caused me hours of frustration until I realised that is should be a <strong>function</strong>  <em>customers()</em> that would be evaluated each time.</p>
+<pre><code class="language-fsharp">let customers() = cxt.Customers      //This is correct now!
+</code></pre>
+<h2 id="tldr">TL;DR</h2>
+<p>So to summarise…</p>
+<ul>
+<li>You can couple your code to data sources at compile time using a type provider.</li>
+<li>Changing the data in the (mutable) db often means changing mutable data in the code.</li>
+<li>Compiling against slow, remote, or inaccessible data sources may cause fairly predictable problems. Keep a local structural copy for compiling against.</li>
+</ul>
+<h2 id="continuing-on">Continuing on</h2>
+<p>This is article #5 in this series, and is the last one that talks about data access technologies. Next time I will discuss a few algorithms that take mutation for granted in your standard computer science textbooks.</p>
+<ol>
+<li><a href="handling-change-in-an-immutable-world">Records: Just like the that one, only different.</a></li>
+<li><a href="the-mutant">The OO way: implementing property setters in F# to “cheat” by creating a C#-style mutable object.</a></li>
+<li><a href="focusing-in-on-change-with-lenses">Lenses: changing the thing inside the thing inside the other thing.</a></li>
+<li><a href="lenses-and-lists">Lenses and lists: changing the thing amongst the other things in that thing…maybe</a></li>
+<li><em>Two-way Type Providers: reflecting changing external data</em></li>
+<li>Some common things that usually rely on mutation: like sorting…</li>
+</ol>
+
+  </body>
+</html>

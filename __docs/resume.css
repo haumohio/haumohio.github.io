@@ -1,0 +1,154 @@
+body{
+  font-size: 14pt;
+}
+@media (min-width: 1200px){
+  .container { width: 970px;}
+}
+h1,h2,h3,h4,h5,h6,h7,h8,h9,.position,.company,.byline{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+}
+h3, h4, .fa, .fa-brands {
+  color: #2288ff !important;
+}
+h3:after {
+  height:2px;
+  background:#2288ff;
+  width:2em;
+  display:block;
+  margin: 0.2em;
+  content:""
+}
+h4{
+  max-width: 90%;
+}
+@media print {
+  h3{
+      color: #2288ff !important;
+  }
+  .fa, .fa:before{
+      color: #2288ff !important;
+  }
+}
+p{
+  text-align: justify;
+}
+p,li{
+  font-family: Century,"Open Serif",serif;
+}
+a, a:visited, a:active{
+  color: currentColor;
+}
+
+/*.position,.company{
+  border-left: 2px solid #2288ff;
+  padding-left: 0.2em;
+  margin: -0.3em;
+}*/
+
+.position, h4{
+  color:#2288ff;
+  font-weight: bold;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.company{
+  font-weight: bold;
+  max-width: 90%;
+}
+img.company-logo {
+  height: 1em;
+  float: right;
+  margin-top: -1.8em;
+}
+ul.naked{
+  padding-left: 0.75em;
+}
+ul.naked li{
+  list-style: none;
+  text-indent: -0.5em;
+  margin-bottom: 0.5em;
+}
+p.indent {
+  margin-left: 1em;
+}
+
+#contacts{
+  font-size: 80%;
+}
+#contacts i {
+  width: 1.2em;
+}
+.profile {
+  position: absolute;
+  left: 26px;
+  top: 16px;
+  height: 12em;
+  z-index: -1;
+}
+
+@media print, (min-width : 768px) {
+  .col-sm-4{
+      border-left: 1px solid #eee;
+  }
+  .hidden-xs {
+      display: block!important;
+  }
+  a[href]:after {
+      content: none !important;
+  }
+}
+@media only screen and (max-width : 768px) {
+  .col-sm-4{
+      border-top: 1px solid #eee;
+      padding-top: 0.5em;
+  }
+}
+@media only screen{
+  .container{
+      border:1px solid #ddd;padding: 1em;
+  }
+}
+
+@media print {
+
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  float: left!important;
+  }
+  .col-sm-12 {
+  width: 100%;
+  }
+  .col-sm-11 {
+  width: 91.66666666666666%;
+  }
+  .col-sm-10 {
+  width: 83.33333333333334%;
+  }
+  .col-sm-9 {
+  width: 75%;
+  }
+  .col-sm-8 {
+  width: 66.66666666666666%;
+  }
+  .col-sm-7 {
+  width: 58.333333333333336%;
+  }
+  .col-sm-6 {
+  width: 50%;
+  }
+  .col-sm-5 {
+  width: 41.66666666666667%;
+  }
+  .col-sm-4 {
+  width: 33.33333333333333%;
+  }
+  .col-sm-3 {
+  width: 25%;
+  }
+  .col-sm-2 {
+  width: 16.666666666666664%;
+  }
+  .col-sm-1 {
+  width: 8.333333333333332%;
+  }
+
+}
